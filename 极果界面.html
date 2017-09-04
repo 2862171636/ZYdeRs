@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .outer{
+            overflow: auto;
+        }
+
+        .header{
+            width: 100%;
+            overflow: hidden;
+            background: pink;
+        }
+        .header-side{
+            width: 1600px;
+
+            background: salmon;
+            margin: auto;
+            position: relative;
+        }
+        .header-top{
+            width: 1360px;
+            height: 120px;
+            background: goldenrod;
+            margin: auto;
+            position: relative;
+        }
+        .jiguo-logo{
+            float: left;
+            height: 100%;
+            width: 200px;
+            background: lemonchiffon;
+            position: relative;
+
+            box-sizing: border-box;
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+
+
+
+        .center{
+            width: 100%;
+            overflow: hidden;
+            background: white;
+        }
+        .center-title{
+            width: 1360px;
+            height: 100px;
+            /*background: white;*/
+            margin: auto;
+            position: relative;
+            box-sizing: border-box;
+            padding-top: 30px;
+
+
+        }
+        .title-text{
+            position: absolute;
+            left: 0px;
+            height: 28px;
+            width: 120px;
+            font-size: 25px;
+            font-weight: 800;
+
+
+        }
+        .read-more:hover{
+            border-bottom: red solid 2px;
+        }
+        .read-more{
+            width: 75px;
+            height: 25px;
+            position: absolute;
+            padding-top: 11px;
+            right: 25px;
+            color: red;
+            font-size: 18px;
+
+            /*background: lemonchiffon;*/
+        }
+        .read-more-logo{
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            padding-top: 13px;
+            right: 0px;
+            /*background: lawngreen;*/
+            margin: auto;
+        }
+        .center-try{
+            width: 1600px;
+            /*background: greenyellow;*/
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .report-outer{
+            width: 100%;
+            overflow: hidden;
+            background: rgb(240,240,240);
+        }
+        .direction-outer{
+            width: 100%;
+            overflow: hidden;
+            background: white;
+        }
+        .loadmore-outer{
+            width: 100%;
+            overflow: hidden;
+            background: rgb(240,240,240);
+        }
+        /*报告精选*/
+        .loadmore-center{
+            width: 1600px;
+            height: 100px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            /*background: lawngreen;*/
+        }
+        .loadmore-text{
+            width: 210px;
+            height: 50px;
+            margin: 0 auto;
+            /*background: lemonchiffon;*/
+            position: relative;
+            overflow: hidden;
+        }
+        .loadmore-text:hover .loadmore-logo{
+            bottom: 10px;
+        }
+        .loadmore-logo{
+            width: 30px;
+            height: 15px;
+            position: absolute;
+            left: 10px;
+            bottom: 15px;
+            /*background: darkblue;*/
+        }
+        .loadmore-word{
+            width: 160px;
+            height: 30px;
+            position: absolute;
+            left: 50px;
+            bottom: 10px;
+
+            font-size: 25px;
+            font-weight: 300;
+            color: red;
+        }
+        .center-report{
+            width: 1600px;
+            height: 900px;
+            /*background: pink;*/
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .center-direction{
+            width: 1600px;
+
+            /*background: pink;*/
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .center-block{
+            width: 22%;
+            height: 470px;
+            float: left;
+            margin: auto;
+            /*background: lemonchiffon;*/
+            position: relative;
+        }
+        .center-report-block{
+            width: 22%;
+            height: 400px;
+            float: left;
+            margin: auto;
+            position: relative;
+            /*background: lemonchiffon;*/
+        }
+        .item{
+            border: solid 1px gainsboro;
+            width: 300px;
+            height: 430px;
+            /*background: white;*/
+            border-radius: 10px;
+            margin: auto;
+            position: relative;
+        }
+        .report-item{
+            border: solid 1px gainsboro;
+            width: 300px;
+            height: 350px;
+            /*background: darkmagenta;*/
+            border-radius: 10px;
+            margin: auto;
+            position: relative;
+        }
+        .direction-item-page{
+            /*border: solid 1px gainsboro;*/
+            width: 300px;
+            height: 20px;
+            /*background: darkmagenta;*/
+            border-radius: 10px;
+            margin: auto;
+            position: relative;
+
+            padding-left: 11px;
+            box-sizing: border-box;
+        }
+        .roc{
+            width: 6%;
+            height: 470px;
+            float: left;
+            /*background: darkkhaki;*/
+            position: relative;
+
+        }
+        .roc-2{
+            width: 6%;
+            height: 400px;
+            float: left;
+            /*background: darkkhaki;*/
+            position: relative;
+        }
+        .prev{
+            position: absolute;
+            right: 0;
+            top: 190px;
+
+        }
+        .next{
+            position: absolute;
+            left: 0;
+            top: 190px;
+        }
+        .item-review{
+            /*图片预览  通过img标签操作*/
+            width: 100%;
+            height: 100%;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            position: relative;
+        }
+        .report-img{
+            width: 300px;
+            height: 190px;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            position: relative;
+        }
+        .item-info:hover{
+            background: rgba(200, 200, 200, 0.1);
+        }
+        .item-info{
+            width: 100%;
+            height: 242px;
+            position: absolute;
+            bottom: 0;
+            background: white;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        .report-info:hover{
+            background: rgba(200, 200, 200, 0.1);
+        }
+        .report-info{
+            width: 100%;
+            height: 160px;
+            position: absolute;
+            bottom: 0;
+            background: white;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .item-info-name{
+            width: 260px;
+            height: 50px;
+            margin: 20px 20px 8px 20px;
+            font-size: 19px;
+            text-align: center;
+            font-weight: bolder;
+            position: relative;
+        }
+        .report-info-name:hover{
+            color: #6d798c;
+        }
+        .report-info-name{
+            width: 260px;
+            height: 50px;
+            margin: 20px 20px 8px 20px;
+            font-size: 17.5px;
+            color: rgb(175,175,175);
+            font-weight: 400;
+            position: relative;
+        }
+        .find-info-name:hover{
+            color: #9bacc6;
+        }
+        .find-info-name{
+            width: 260px;
+            height: 25px;
+            margin: 20px 20px 8px 20px;
+            font-size: 18px;
+            color: rgb(150,150,150);
+            font-weight: 400;
+            position: relative;
+        }
+        .find-info-text:hover{
+            color: #9bacc6;
+        }
+        .find-info-text{
+            width: 260px;
+            height: 17px;
+            margin: 0px 20px 8px 20px;
+            font-size: 16px;
+            color: rgb(190,190,190);
+            font-weight: 400;
+            position: relative;
+        }
+        .report-writer:hover{
+            color: #6d798c;
+        }
+        .report-writer{
+            width: 50px;
+            height: 20px;
+
+            /*background: pink;*/
+            position: absolute;
+            left: 15px;
+            bottom: 25px;
+            text-align: center;
+
+            color: rgb(200,200,200);
+            font-size: 15px;
+        }
+        .find-price{
+            width: 80px;
+            height: 30px;
+
+            /*background: pink;*/
+            position: absolute;
+            left: 15px;
+            bottom: 25px;
+            text-align: center;
+
+            color: red;
+            font-size: 20px;
+            font-weight: 300;
+        }
+        .report-text{
+            width: 80px;
+            height: 20px;
+
+            /*background: pink;*/
+            position: absolute;
+            right: 15px;
+            bottom: 25px;
+            overflow: hidden;
+        }
+        .report-text-square:hover{
+            color: #6d798c;
+        }
+        .report-text-square{
+            width: 20px;
+            height: 20px;
+            float: left;
+            /*background: lemonchiffon;*/
+
+            text-align: center;
+            color: rgb(200,200,200);
+            position: relative;
+        }
+        .item-info-price{
+            width: 174px;
+            height: 35px;
+            /*background: white;*/
+            margin: 0 auto;
+            position: relative;
+        }
+        .pricebox:hover{
+            background: red;
+            color: white;
+        }
+        .pricebox{
+
+            margin: 0px 10px;
+            border: solid 1px red;
+            height: 32px;
+            width: 65px;
+            border-radius: 10px;
+            float: left;
+
+            text-align: center;
+            padding-top: 5px;
+            box-sizing: border-box;
+            /*确定大小，不会随padding改变大小*/
+
+            font-size: 14px;
+            color: red;
+            font-weight: 300;
+
+        }
+        .pricebox-green:hover{
+            background: forestgreen;
+            color: white;
+        }
+        .pricebox-green{
+
+            margin: 0px 10px;
+            border: solid 1px forestgreen;
+            height: 32px;
+            width: 65px;
+            border-radius: 10px;
+            float: left;
+
+            text-align: center;
+            padding-top: 5px;
+            box-sizing: border-box;
+            /*确定大小，不会随padding改变大小*/
+
+            font-size: 14px;
+            color: forestgreen;
+            font-weight: 300;
+
+        }
+        .item-info-num{
+            margin: 0 auto;
+            /*background: white;*/
+            text-align: center;
+            padding-top: 15px;
+            font-size: 25px;
+            font-weight: 300;
+            position: relative;
+        }
+        .item-info-rest{
+            margin: 0 auto;
+            /*background: white;*/
+            text-align: center;
+            padding-top: 10px;
+            font-size: 22px;
+            font-weight: 300;
+            position: relative;
+            color: orangered;
+        }
+        .item-info-rest-green:hover{
+            color: #22AC38;
+        }
+        .item-info-rest-green{
+            margin: 0 auto;
+            /*background: white;*/
+            text-align: center;
+            padding-top: 10px;
+            font-size: 22px;
+            font-weight: 300;
+            position: relative;
+            color: limegreen;
+        }
+        .item-redtag{
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            width: 50px;
+            height: 27px;
+            border-bottom-left-radius: 10px;
+            border-top-right-radius: 10px;
+            background: red;
+
+            color: white;
+            text-align: center;
+            font-weight: 200;
+
+            box-sizing: border-box;
+            padding-top: 2px;
+        }
+        .item-yellowtag{
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            width: 100px;
+            height: 27px;
+            border-bottom-left-radius: 10px;
+            border-top-right-radius: 10px;
+            background: lightyellow;
+
+            color: goldenrod;
+            text-align: center;
+            font-weight: 200;
+
+            box-sizing: border-box;
+            padding-top: 2px;
+        }
+        .div-redxin-r:hover{
+            display: inline;
+        }
+        .div-redxin-w:hover{
+            display: none;
+        }
+        .div-redxin-w{
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 20px;
+            width: 20px;
+            /*background: aqua;*/
+            display: inline;
+        }
+        .div-redxin-r{
+
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 20px;
+            width: 20px;
+            /*background: aqua;*/
+            display: none;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="outer">
+    <div class="header">
+        <div class="header-side">
+            <div class="header-top">
+                <div class="jiguo-logo">
+                    <img src="../resource/img/jiguo/logonew.png"style="width: 100%;height: 100%">
+                </div>
+                <div></div>
+            </div>
+        </div>
+
+    </div>
+    <div class="center">
+        <div class="center-try">
+            <div class="center-title">
+                <div class="title-text">b</div>
+            </div>
+            <div class="roc">
+                <div class="prev">
+                    <img src="../resource/img/jiguo/prev.png">
+                </div>
+            </div>
+            <div class="center-block">
+                <div class="item">
+                    <div class="item-review" style="background: url('../resource/img/jiguo/hot9.jpg') no-repeat;">
+                        <div class="item-redtag">
+                            首发
+                        </div>
+                        <div class="item-info">
+                            <div class="item-info-name">
+                                巴慕达 THE TOASTER 烤面包机
+                            </div>
+                            <div class="item-info-price">
+                                <div class="pricebox">￥ 512</div>
+                                <div class="pricebox">20 台</div>
+                            </div>
+                            <div class="item-info-num">
+                                <span style="color: orangered">1392</span><span>申请</span>
+                            </div>
+                            <div class="item-info-rest">
+                                剩余时间2天
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center-block">
+                <div class="item">
+                    <div class="item-review" style="background: url('../resource/img/jiguo/hot10.jpg') no-repeat;">
+                        <div class="item-yellowtag">
+                            体验师专享
+                        </div>
+                        <div class="item-info">
+                            <div class="item-info-name">
+                                Osprey 小鹰户外运动专用腰包
+                            </div>
+                            <div class="item-info-price">
+                                <div class="pricebox-green">￥ 512</div>
+                                <div class="pricebox-green">20 台</div>
+                            </div>
+                            <div class="item-info-num">
+                                <span style="color: orangered">1392</span><span>申请</span>
+                            </div>
+                            <div class="item-info-rest-green">
+                                查看试用名单
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center-block">
+                <div class="item">
+                    <div class="item-review" style="background: url('../resource/img/jiguo/hot11.jpg') no-repeat;">
+                        <div class="item-redtag">
+                            首发
+                        </div>
+                        <div class="item-info">
+                            <div class="item-info-name">
+                                Liquid Image 338 运动摄像眼镜
+                            </div>
+                            <div class="item-info-price">
+                                <div class="pricebox">￥ 512</div>
+                                <div class="pricebox">20 台</div>
+                            </div>
+                            <div class="item-info-num">
+                                <span style="color: orangered">1392</span><span>申请</span>
+                            </div>
+                            <div class="item-info-rest">
+                                剩余时间2天
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center-block">
+                <div class="item">
+                    <div class="item-review" style="background: url('../resource/img/jiguo/hot12.jpg') no-repeat;">
+                        <div class="item-redtag">
+                            首发
+                        </div>
+                        <div class="item-info">
+                            <div class="item-info-name">
+                                巴慕达 THE TOASTER 烤面包机
+                            </div>
+                            <div class="item-info-price">
+                                <div class="pricebox">￥ 512</div>
+                                <div class="pricebox">20 台</div>
+                            </div>
+                            <div class="item-info-num">
+                                <span style="color: orangered">1392</span><span>申请</span>
+                            </div>
+                            <div class="item-info-rest">
+                                剩余时间2天
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="roc">
+                <div class="next">
+                    <img src="../resource/img/jiguo/next.png">
+                </div>
+            </div>
+        </div>
+        <div class="report-outer">
+            <div class="center-report">
+                <div class="center-title">
+                    <div class="title-text">
+                        报告精选
+                    </div>
+                    <div class="read-more">
+                        查看更多
+                    </div>
+                    <div class="read-more-logo">
+                        <img src="../resource/img/jiguo/readMore.png" style="width: 75%;height: 60%">
+                    </div>
+                </div>
+                <div class="roc"></div>
+                <div class="center-report-block">
+                    <div class="report-item">
+                        <div class="report-img">
+                            <img  class="item-review" src="../resource/img/jiguo/bg1.jpg">
+                        </div>
+                        <div class="report-info">
+                            <div class="report-info-name">空气净化器里面学问多的惊呆你 ，你选对了吗 ？</div>
+                            <div class="report-writer">
+                                ● 苏苏
+                            </div>
+                            <div class="report-text">
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/zan.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/reply.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="center-report-block">
+                    <div class="report-item">
+                        <div class="report-img">
+                            <img  class="item-review" src="../resource/img/jiguo/re2.jpg">
+                        </div>
+                        <div class="report-info">
+                            <div class="report-info-name">怎么骑都不会累的智能自行车：云马 C1试骑体验</div>
+                            <div class="report-writer">
+                                ● 好吗
+                            </div>
+                            <div class="report-text">
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/zan.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/reply.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="center-report-block">
+
+                    <div class="report-item">
+                        <div class="report-img">
+                            <img  class="item-review" src="../resource/img/jiguo/re3.jpg">
+                        </div>
+                        <div class="report-info">
+                            <div class="report-info-name">声音不是最优秀，但它形音完美的结合，足以打动人心</div>
+                            <div class="report-writer">
+                                ● iAra
+                            </div>
+                            <div class="report-text">
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/zan.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/reply.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="center-report-block">
+                    <div class="report-item">
+                        <div class="report-img">
+                            <img  class="item-review" src="../resource/img/jiguo/bg1.jpg">
+                        </div>
+                        <div class="report-info">
+                            <div class="report-info-name">风光大片信手拈来！vivo X6Plus不只是快，还是一台拍照利器！</div>
+                            <div class="report-writer">
+                                ● 苏苏
+                            </div>
+                            <div class="report-text">
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/zan.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/reply.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="center-report-block">
+                    <div class="report-item">
+                        <div class="report-img">
+                            <img  class="item-review" src="../resource/img/jiguo/re2.jpg">
+                        </div>
+                        <div class="report-info">
+                            <div class="report-info-name">空气净化器里面学问多的惊呆你 ，你选对了吗 ？</div>
+                            <div class="report-writer">
+                                ● 苏苏
+                            </div>
+                            <div class="report-text">
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/zan.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/reply.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="center-report-block">
+                    <div class="report-item">
+                        <div class="report-img">
+                            <img  class="item-review" src="../resource/img/jiguo/re3.jpg">
+                        </div>
+                        <div class="report-info">
+                            <div class="report-info-name">声音不是最优秀，但它形音完美的结合，足以打动人心</div>
+                            <div class="report-writer">
+                                ● 苏苏
+                            </div>
+                            <div class="report-text">
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/zan.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/reply.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="center-report-block">
+                    <div class="report-item">
+                        <div class="report-img">
+                            <img  class="item-review" src="../resource/img/jiguo/bg1.jpg">
+                        </div>
+                        <div class="report-info">
+                            <div class="report-info-name">怎么骑都不会累的智能自行车：云马 C1试骑体验</div>
+                            <div class="report-writer">
+                                ● 苏苏
+                            </div>
+                            <div class="report-text">
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/zan.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/reply.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="center-report-block">
+                    <div class="report-item">
+                        <div class="report-img">
+                            <img  class="item-review" src="../resource/img/jiguo/re2.jpg">
+                        </div>
+                        <div class="report-info">
+                            <div class="report-info-name">空气净化器里面学问多的惊呆你 ，你选对了吗 ？</div>
+                            <div class="report-writer">
+                                ● 苏苏
+                            </div>
+                            <div class="report-text">
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/zan.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/reply.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="roc"></div>
+            </div>
+
+        </div>
+        <div class="direction-outer">
+            <div class="center-direction">
+                <div class="center-title">
+                    <div class="title-text">导购精选</div>
+                    <div class="read-more">查看更多</div>
+                    <div class="read-more-logo">
+                        <img src="../resource/img/jiguo/readMore.png" style="width: 75%;height: 60%">
+                    </div>
+                </div>
+                <div class="roc-2"></div>
+                <div class="center-report-block">
+                    <div class="report-item">
+                        <div class="report-img">
+                            <img  class="item-review" src="../resource/img/jiguo/g1.jpg">
+                        </div>
+                        <div class="report-info">
+                            <div class="report-info-name">花万元把蜗居秒变 "豪宅" ？ 这 12件家具就帮你办到</div>
+
+                            <div class="report-text">
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/zan.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/reply.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="direction-item-page">
+                        <img src="../resource/img/jiguo/listbg.jpg"style="width: 95%;height: 100%">
+                    </div>
+                </div>
+                <div class="center-report-block">
+                    <div class="report-item">
+                        <div class="report-img">
+                            <img  class="item-review" src="../resource/img/jiguo/g2.jpg">
+                        </div>
+                        <div class="report-info">
+                            <div class="report-info-name">到底有没有完美的 iphone 手机配件，答案都在这里</div>
+
+                            <div class="report-text">
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/zan.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/reply.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="direction-item-page">
+                        <img src="../resource/img/jiguo/listbg.jpg"style="width: 95%;height: 100%">
+                    </div>
+                </div>
+                <div class="center-report-block">
+                    <div class="report-item">
+                        <div class="report-img">
+                            <img  class="item-review" src="../resource/img/jiguo/g3.jpg">
+                        </div>
+                        <div class="report-info">
+                            <div class="report-info-name">2016 ，这8支钢笔够你装逼一整年</div>
+
+                            <div class="report-text">
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/zan.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/reply.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="direction-item-page">
+                        <img src="../resource/img/jiguo/listbg.jpg"style="width: 95%;height: 100%">
+                    </div>
+                </div>
+                <div class="center-report-block">
+                    <div class="report-item">
+                        <div class="report-img">
+                            <img  class="item-review" src="../resource/img/jiguo/g4.jpg">
+                        </div>
+                        <div class="report-info">
+                            <div class="report-info-name">他用12年找一把完美 剃须刀 ， 给你2万字终极购买指南</div>
+
+                            <div class="report-text">
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/zan.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/reply.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="direction-item-page">
+                        <img src="../resource/img/jiguo/listbg.jpg"style="width: 95%;height: 100%">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="report-outer">
+            <div class="center-try">
+                <div class="center-title">
+                    <div class="title-text">发现酷玩</div>
+                    <div class="read-more">查看更多</div>
+                    <div class="read-more-logo">
+                        <img src="../resource/img/jiguo/readMore.png" style="width: 75%;height: 60%">
+                    </div>
+                </div>
+                <div class="roc-2"></div>
+                <div class="center-report-block">
+                    <div class="report-item">
+                        <div class="report-img">
+                            <img  class="item-review" src="../resource/img/jiguo/k1.jpg">
+                        </div>
+                        <div class="report-info">
+                            <div class="find-info-name">SCiO 微型光谱仪</div>
+                            <div class="find-info-text">可以测定食物成分及营养</div>
+                            <div class="find-price">
+                                ￥ 1212
+                            </div>
+                            <div class="report-text">
+                                <div class="report-text-square">
+                                    <div class="div-redxin-w">
+                                        <img src="../resource/img/jiguo/xinRedo.png" style="width: 80%;height: 80%">
+                                    </div>
+
+                                    <div class="div-redxin-r">
+                                        <img src="../resource/img/jiguo/xinRedh.png" style="width: 80%;height: 80%">
+                                    </div>
+                                </div>
+                                <div class="report-text-square">3</div>
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/reply.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="center-report-block">
+                    <div class="report-item">
+                        <div class="report-img">
+                            <img  class="item-review" src="../resource/img/jiguo/k2.jpg">
+                        </div>
+                        <div class="report-info">
+                            <div class="find-info-name">B&O BeoSound 35音响</div>
+                            <div class="find-info-text">支持所有音乐流媒体服务</div>
+                            <div class="find-price">
+                                ￥ 512
+                            </div>
+                            <div class="report-text">
+                                <div class="report-text-square">
+                                    <div class="div-redxin-w">
+                                        <img src="../resource/img/jiguo/xinRedo.png" style="width: 80%;height: 80%">
+                                    </div>
+
+                                    <div class="div-redxin-r">
+                                        <img src="../resource/img/jiguo/xinRedh.png" style="width: 80%;height: 80%">
+                                    </div>
+                                </div>
+                                <div class="report-text-square">3</div>
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/reply.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="center-report-block">
+                    <div class="report-item">
+                        <div class="report-img">
+                            <img  class="item-review" src="../resource/img/jiguo/k3.jpg">
+                        </div>
+                        <div class="report-info">
+                            <div class="find-info-name">Mozbii 触控吸色笔</div>
+                            <div class="find-info-text">能吸取65000种颜色</div>
+                            <div class="find-price">
+                                ￥ 暂无
+                            </div>
+                            <div class="report-text">
+                                <div class="report-text-square">
+                                    <div class="div-redxin-w">
+                                        <img src="../resource/img/jiguo/xinRedo.png" style="width: 80%;height: 80%">
+                                    </div>
+
+                                    <div class="div-redxin-r">
+                                        <img src="../resource/img/jiguo/xinRedh.png" style="width: 80%;height: 80%">
+                                    </div>
+                                </div>
+                                <div class="report-text-square">3</div>
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/reply.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="center-report-block">
+                    <div class="report-item">
+                        <div class="report-img">
+                            <img  class="item-review" src="../resource/img/jiguo/k4.jpg">
+                        </div>
+                        <div class="report-info">
+                            <div class="find-info-name">XPLORER 2 航拍飞行器</div>
+                            <div class="find-info-text">搭载自动智障系统</div>
+                            <div class="find-price">
+                                ￥ 233
+                            </div>
+                            <div class="report-text">
+                                <div class="report-text-square">
+                                    <div class="div-redxin-w">
+                                        <img src="../resource/img/jiguo/xinRedo.png" style="width: 80%;height: 80%">
+                                    </div>
+
+                                    <div class="div-redxin-r">
+                                        <img src="../resource/img/jiguo/xinRedh.png" style="width: 80%;height: 80%">
+                                    </div>
+                                </div>
+                                <div class="report-text-square">3</div>
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/reply.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="roc-2"></div>
+                <div class="roc-2"></div>
+                <div class="center-report-block">
+                    <div class="report-item">
+                        <div class="report-img">
+                            <img  class="item-review" src="../resource/img/jiguo/k1.jpg">
+                        </div>
+                        <div class="report-info">
+                            <div class="find-info-name">SCiO 微型光谱仪</div>
+                            <div class="find-info-text">可以测定食物成分及营养</div>
+                            <div class="find-price">
+                                ￥ 1212
+                            </div>
+                            <div class="report-text">
+                                <div class="report-text-square">
+                                    <div class="div-redxin-w">
+                                        <img src="../resource/img/jiguo/xinRedo.png" style="width: 80%;height: 80%">
+                                    </div>
+
+                                    <div class="div-redxin-r">
+                                        <img src="../resource/img/jiguo/xinRedh.png" style="width: 80%;height: 80%">
+                                    </div>
+                                </div>
+                                <div class="report-text-square">3</div>
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/reply.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="center-report-block">
+                    <div class="report-item">
+                        <div class="report-img">
+                            <img  class="item-review" src="../resource/img/jiguo/k2.jpg">
+                        </div>
+                        <div class="report-info">
+                            <div class="find-info-name">B&O BeoSound 35音响</div>
+                            <div class="find-info-text">支持所有音乐流媒体服务</div>
+                            <div class="find-price">
+                                ￥ 512
+                            </div>
+                            <div class="report-text">
+                                <div class="report-text-square">
+                                    <div class="div-redxin-w">
+                                        <img src="../resource/img/jiguo/xinRedo.png" style="width: 80%;height: 80%">
+                                    </div>
+
+                                    <div class="div-redxin-r">
+                                        <img src="../resource/img/jiguo/xinRedh.png" style="width: 80%;height: 80%">
+                                    </div>
+                                </div>
+                                <div class="report-text-square">3</div>
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/reply.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="center-report-block">
+                    <div class="report-item">
+                        <div class="report-img">
+                            <img  class="item-review" src="../resource/img/jiguo/k3.jpg">
+                        </div>
+                        <div class="report-info">
+                            <div class="find-info-name">Mozbii 触控吸色笔</div>
+                            <div class="find-info-text">能吸取65000种颜色</div>
+                            <div class="find-price">
+                                ￥ 暂无
+                            </div>
+                            <div class="report-text">
+                                <div class="report-text-square">
+                                    <div class="div-redxin-w">
+                                        <img src="../resource/img/jiguo/xinRedo.png" style="width: 80%;height: 80%">
+                                    </div>
+
+                                    <div class="div-redxin-r">
+                                        <img src="../resource/img/jiguo/xinRedh.png" style="width: 80%;height: 80%">
+                                    </div>
+                                </div>
+                                <div class="report-text-square">3</div>
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/reply.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="center-report-block">
+                    <div class="report-item">
+                        <div class="report-img">
+                            <img  class="item-review" src="../resource/img/jiguo/k4.jpg">
+                        </div>
+                        <div class="report-info">
+                            <div class="find-info-name">XPLORER 2 航拍飞行器</div>
+                            <div class="find-info-text">搭载自动智障系统</div>
+                            <div class="find-price">
+                                ￥ 233
+                            </div>
+                            <div class="report-text">
+                                <div class="report-text-square">
+                                    <div class="div-redxin-w">
+                                        <img src="../resource/img/jiguo/xinRedo.png" style="width: 80%;height: 80%">
+                                    </div>
+
+                                    <div class="div-redxin-r">
+                                        <img src="../resource/img/jiguo/xinRedh.png" style="width: 80%;height: 80%">
+                                    </div>
+                                </div>
+                                <div class="report-text-square">3</div>
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/reply.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="roc-2"></div>
+                <div class="roc-2"></div>
+                <div class="center-report-block">
+                    <div class="report-item">
+                        <div class="report-img">
+                            <img  class="item-review" src="../resource/img/jiguo/k1.jpg">
+                        </div>
+                        <div class="report-info">
+                            <div class="find-info-name">SCiO 微型光谱仪</div>
+                            <div class="find-info-text">可以测定食物成分及营养</div>
+                            <div class="find-price">
+                                ￥ 1212
+                            </div>
+                            <div class="report-text">
+                                <div class="report-text-square">
+                                    <div class="div-redxin-w">
+                                        <img src="../resource/img/jiguo/xinRedo.png" style="width: 80%;height: 80%">
+                                    </div>
+
+                                    <div class="div-redxin-r">
+                                        <img src="../resource/img/jiguo/xinRedh.png" style="width: 80%;height: 80%">
+                                    </div>
+                                </div>
+                                <div class="report-text-square">3</div>
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/reply.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="center-report-block">
+                    <div class="report-item">
+                        <div class="report-img">
+                            <img  class="item-review" src="../resource/img/jiguo/k2.jpg">
+                        </div>
+                        <div class="report-info">
+                            <div class="find-info-name">B&O BeoSound 35音响</div>
+                            <div class="find-info-text">支持所有音乐流媒体服务</div>
+                            <div class="find-price">
+                                ￥ 512
+                            </div>
+                            <div class="report-text">
+                                <div class="report-text-square">
+                                    <div class="div-redxin-w">
+                                        <img src="../resource/img/jiguo/xinRedo.png" style="width: 80%;height: 80%">
+                                    </div>
+
+                                    <div class="div-redxin-r">
+                                        <img src="../resource/img/jiguo/xinRedh.png" style="width: 80%;height: 80%">
+                                    </div>
+                                </div>
+                                <div class="report-text-square">3</div>
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/reply.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="center-report-block">
+                    <div class="report-item">
+                        <div class="report-img">
+                            <img  class="item-review" src="../resource/img/jiguo/k3.jpg">
+                        </div>
+                        <div class="report-info">
+                            <div class="find-info-name">Mozbii 触控吸色笔</div>
+                            <div class="find-info-text">能吸取65000种颜色</div>
+                            <div class="find-price">
+                                ￥ 暂无
+                            </div>
+                            <div class="report-text">
+                                <div class="report-text-square">
+                                    <div class="div-redxin-w">
+                                        <img src="../resource/img/jiguo/xinRedo.png" style="width: 80%;height: 80%">
+                                    </div>
+
+                                    <div class="div-redxin-r">
+                                        <img src="../resource/img/jiguo/xinRedh.png" style="width: 80%;height: 80%">
+                                    </div>
+                                </div>
+                                <div class="report-text-square">3</div>
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/reply.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="center-report-block">
+                    <div class="report-item">
+                        <div class="report-img">
+                            <img  class="item-review" src="../resource/img/jiguo/k4.jpg">
+                        </div>
+                        <div class="report-info">
+                            <div class="find-info-name">XPLORER 2 航拍飞行器</div>
+                            <div class="find-info-text">搭载自动智障系统</div>
+                            <div class="find-price">
+                                ￥ 233
+                            </div>
+                            <div class="report-text">
+                                <div class="report-text-square">
+                                    <div class="div-redxin-w">
+                                        <img src="../resource/img/jiguo/xinRedo.png" style="width: 80%;height: 80%">
+                                    </div>
+
+                                    <div class="div-redxin-r">
+                                        <img src="../resource/img/jiguo/xinRedh.png" style="width: 80%;height: 80%">
+                                    </div>
+                                </div>
+                                <div class="report-text-square">3</div>
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/reply.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="roc-2"></div>
+                <div class="roc-2"></div>
+                <div class="center-report-block">
+                    <div class="report-item">
+                        <div class="report-img">
+                            <img  class="item-review" src="../resource/img/jiguo/k1.jpg">
+                        </div>
+                        <div class="report-info">
+                            <div class="find-info-name">SCiO 微型光谱仪</div>
+                            <div class="find-info-text">可以测定食物成分及营养</div>
+                            <div class="find-price">
+                                ￥ 1212
+                            </div>
+                            <div class="report-text">
+                                <div class="report-text-square">
+                                    <div class="div-redxin-w">
+                                        <img src="../resource/img/jiguo/xinRedo.png" style="width: 80%;height: 80%">
+                                    </div>
+
+                                    <div class="div-redxin-r">
+                                        <img src="../resource/img/jiguo/xinRedh.png" style="width: 80%;height: 80%">
+                                    </div>
+                                </div>
+                                <div class="report-text-square">3</div>
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/reply.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="center-report-block">
+                    <div class="report-item">
+                        <div class="report-img">
+                            <img  class="item-review" src="../resource/img/jiguo/k2.jpg">
+                        </div>
+                        <div class="report-info">
+                            <div class="find-info-name">B&O BeoSound 35音响</div>
+                            <div class="find-info-text">支持所有音乐流媒体服务</div>
+                            <div class="find-price">
+                                ￥ 512
+                            </div>
+                            <div class="report-text">
+                                <div class="report-text-square">
+                                    <div class="div-redxin-w">
+                                        <img src="../resource/img/jiguo/xinRedo.png" style="width: 80%;height: 80%">
+                                    </div>
+
+                                    <div class="div-redxin-r">
+                                        <img src="../resource/img/jiguo/xinRedh.png" style="width: 80%;height: 80%">
+                                    </div>
+                                </div>
+                                <div class="report-text-square">3</div>
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/reply.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="center-report-block">
+                    <div class="report-item">
+                        <div class="report-img">
+                            <img  class="item-review" src="../resource/img/jiguo/k3.jpg">
+                        </div>
+                        <div class="report-info">
+                            <div class="find-info-name">Mozbii 触控吸色笔</div>
+                            <div class="find-info-text">能吸取65000种颜色</div>
+                            <div class="find-price">
+                                ￥ 暂无
+                            </div>
+                            <div class="report-text">
+                                <div class="report-text-square">
+                                    <div class="div-redxin-w">
+                                        <img src="../resource/img/jiguo/xinRedo.png" style="width: 80%;height: 80%">
+                                    </div>
+
+                                    <div class="div-redxin-r">
+                                        <img src="../resource/img/jiguo/xinRedh.png" style="width: 80%;height: 80%">
+                                    </div>
+                                </div>
+                                <div class="report-text-square">3</div>
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/reply.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="center-report-block">
+                    <div class="report-item">
+                        <div class="report-img">
+                            <img  class="item-review" src="../resource/img/jiguo/k4.jpg">
+                        </div>
+                        <div class="report-info">
+                            <div class="find-info-name">XPLORER 2 航拍飞行器</div>
+                            <div class="find-info-text">搭载自动智障系统</div>
+                            <div class="find-price">
+                                ￥ 233
+                            </div>
+                            <div class="report-text">
+                                <div class="report-text-square">
+                                    <div class="div-redxin-w">
+                                        <img src="../resource/img/jiguo/xinRedo.png" style="width: 80%;height: 80%">
+                                    </div>
+
+                                    <div class="div-redxin-r">
+                                        <img src="../resource/img/jiguo/xinRedh.png" style="width: 80%;height: 80%">
+                                    </div>
+                                </div>
+                                <div class="report-text-square">3</div>
+                                <div class="report-text-square">
+                                    <img src="../resource/img/jiguo/reply.png" style="width: 80%;height: 80%">
+                                </div>
+                                <div class="report-text-square">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="roc-2"></div>
+            </div>
+
+        </div>
+        <div class="loadmore-outer">
+            <div class="loadmore-center">
+                <div class="loadmore-text">
+                    <div class="loadmore-logo">
+                        <img src="../resource/img/jiguo/more.png"style="width: 100%;height: 100%">
+                    </div>
+                    <div class="loadmore-word">
+                        点击加载更多
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
